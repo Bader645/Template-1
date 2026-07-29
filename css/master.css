@@ -6,6 +6,7 @@
     --thirdColor: #9b9b9b;
     --secondaryBackColor: #020d43;
     --mainBackColor: #141931;
+    --sectionPadding: 60px;
 }
 
 /* Start Of Variables */
@@ -262,8 +263,8 @@ header .links ul li:hover a {
 /* Start Of Features */
 
 .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
     background-color: var(--secondaryBackColor, black);
 }
 
@@ -307,8 +308,8 @@ header .links ul li:hover a {
 /* Start Of Services */
 
 .services {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
 }
 
 .services .services-content {
@@ -318,20 +319,20 @@ header .links ul li:hover a {
     margin-top: 100px;
 }
 
-.services .services-content  .service {
+.services .services-content .service {
     display: flex;
     margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {
-    .services .services-content .service{
+    .services .services-content .service {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 }
 
-.services .services-content  .service i{
+.services .services-content .service i {
     color: var(--mainColor);
     flex-basis: 60px;
 }
@@ -349,7 +350,7 @@ header .links ul li:hover a {
 
 .services .services-content .service h3 {
     margin: 0 0 20px;
-} 
+}
 
 .services .services-content .service p {
     line-height: 1.8;
@@ -382,3 +383,61 @@ header .links ul li:hover a {
 }
 
 /* End Of Services */
+
+/* Start Of Portfolio */
+
+.portfolio {
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
+    background-color: var(--secondaryBackColor, black);
+}
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+
+.portfolio .portfolio-content .card {
+    background-color: var(--mainBackColor);
+    box-shadow: 6px 6px 5px -4px;
+}
+
+@media (max-width: 767px) {
+    .portfolio .portfolio-content .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.portfolio .portfolio-content .card img {
+    width: 100%;
+}
+
+.portfolio .portfolio-content .card .info {
+    padding: 30px;
+}
+
+.portfolio .portfolio-content .card .info h3,
+.portfolio .portfolio-content .card .info p {
+    text-transform: capitalize;
+}
+
+.portfolio .portfolio-content .card .info h3 {
+    color: var(--mainColor);
+    /* you ought to edit the font-weight for this one to make it thicker */
+    margin: 0;
+}
+
+.portfolio .portfolio-content .card .info p {
+    color: var(--secondaryColor);
+    line-height: 1.8;
+    font-size: 19px;
+    margin-bottom: 0;
+}
+
+/* End Of Portfolio */
