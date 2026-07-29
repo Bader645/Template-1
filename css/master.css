@@ -4,8 +4,8 @@
     --mainColor: #7189ef;
     --secondaryColor: #57b28c;
     --thirdColor: #9b9b9b;
-    --mainBackColor: #020d43;
-    --secondaryBackColor: #141931;
+    --secondaryBackColor: #020d43;
+    --mainBackColor: #141931;
 }
 
 /* Start Of Variables */
@@ -20,7 +20,7 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--secondaryBackColor, grey);
+    background-color: var(--mainBackColor, grey);
 }
 
 .container {
@@ -119,17 +119,14 @@ header .links .icon span {
     height: 2px;
 }
 
-header .links .icon span:first-child {
+header .links .icon span:first-child,
+header .links .icon span:last-child {
     width: 100%;
 }
 
 header .links .icon span:nth-child(2) {
     width: 70%;
     transition: width .5s ease .02s;
-}
-
-header .links .icon span:last-child {
-    width: 100%;
 }
 
 header .links ul {
@@ -151,7 +148,7 @@ header .links ul {
         only, and it gave you a headache. but after, you let the transition handle the closing, while animating the opening with keyframes
     */
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
     transition: display .5s ease .02s, opacity .5s ease .02s, transform .5s ease .02s;
     transition-behavior: allow-discrete;
     /* transition: display .5s ease .02s; */
@@ -185,7 +182,7 @@ header .links ul::before {
     border-color: transparent transparent rgb(187, 187, 187) transparent;
     position: absolute;
     /*
-         you put those 2 exact numbers because somehow they're being rendered into 19.2 instead of 20
+        you put those 2 exact numbers because somehow they're being rendered into 19.2 instead of 20
         and you still don't know anything, and couldn't even get any useful help from google, on how to fix it 
     */
     right: 5.4px;
@@ -246,6 +243,7 @@ header .links ul li:hover a {
 
 .landing .intro-text p {
     line-height: 1.8;
+    font-size: 19px;
 }
 
 /* End Of Landing Section*/
@@ -255,7 +253,7 @@ header .links ul li:hover a {
 .features {
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: var(--mainBackColor, black);
+    background-color: var(--secondaryBackColor, black);
 }
 
 .features .container {
@@ -267,6 +265,7 @@ header .links ul li:hover a {
 .features .feat {
     padding: 20px;
     text-align: center;
+    box-shadow: 4px 4px 3px -2px;
 }
 
 .features .feat i {
