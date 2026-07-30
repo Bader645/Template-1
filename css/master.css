@@ -459,18 +459,26 @@ header .links ul li:hover a {
     margin-top: 100px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .about .about-content {
         flex-direction: column;
+        align-items: center;
     }
 
     .about .about-content .text {
         padding-top: var(--sectionPadding);
     }
+
+    .about .about-content .image::before,
+    .about .about-content .image::after {
+        display: none;
+    }
 }
 
 .about .about-content .text {
     padding-left: var(--sectionPadding);
+    flex-basis: calc(100% - 500px);
+    transform: translateY(-35px);
 }
 
 .about .about-content .text hr {
@@ -479,6 +487,7 @@ header .links ul li:hover a {
     /* pushing it far left, switch values to push it far right */
     margin-right: auto;
     margin-left: 0;
+    /* or just go inline-block???? */
 }
 
 .about .about-content .text p {
@@ -488,11 +497,15 @@ header .links ul li:hover a {
 .about .about-content .text p:first-child {
     margin-top: 0;
     margin-bottom: 30px;
+    padding-top: 30px;
+    line-height: 2;
+    font-weight: bold;
 }
 
 .about .about-content .text p:last-child {
     margin: 0;
     padding-top: 10px;
+    line-height: 1.8;
 }
 
 .about .about-content .image {
@@ -527,5 +540,33 @@ header .links ul li:hover a {
     bottom: 70px;
     z-index: -1;
 }
+
+/*
+    nigga he deleted those T_T 
+    well yeah honestly it's better     
+*/
+
+/* @media (max-width: 767px) {
+    .about .about-content .image {
+        width: 250px;
+        height: 170px;
+    }
+
+    .about .about-content .image::before {
+        width: 60px;
+        height: calc(100% + 15px);
+        left: -10px;
+        bottom: 10px;
+    }
+
+    .about .about-content .image::after {
+        border-left: 50px solid var(--mainColor);
+        border-bottom: 50px solid var(--mainColor);
+        width: 30px;
+        height: 80px;
+        right: -45px;
+        bottom: 80px;
+    }
+} */
 
 /* Start Of About */
