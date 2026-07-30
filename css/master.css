@@ -4,8 +4,9 @@
     --mainColor: #7189ef;
     --secondaryColor: #57b28c;
     --thirdColor: #9b9b9b;
-    --secondaryBackColor: #020d43;
     --mainBackColor: #141931;
+    --secondaryBackColor: #020d43;
+    --contactSectionColor: #010727;
     --sectionPadding: 60px;
 }
 
@@ -17,6 +18,10 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -570,3 +575,78 @@ header .links ul li:hover a {
 } */
 
 /* Start Of About */
+
+/* Start Of Contact */
+
+.contact {
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
+    background-color: var(--contactSectionColor);
+    color: var(--mainColor);
+}
+
+.contact .info {
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
+    text-align: center;
+}
+
+.contact .info .label {
+    font-size: 35px;
+    font-weight: bolder; 
+    color: var(--mainColor);
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.contact .info .link {
+    display: block;
+    text-decoration: none;
+    color: var(--secondaryColor);
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.contact .info .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.contact .info .social i {
+    margin-left: 10px;
+    color: var(--secondaryColor);
+}
+
+@media (max-width: 767px) {
+    .contact .info .label,
+    .contact .info .link {
+        font-size: 20px;
+    }
+}
+
+/* End Of Contact */
+
+/* Start Of Footer */
+
+footer {
+    background-color: var(--secondaryBackColor);
+    color: rgb(102, 110, 135);
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    footer {
+        font-size: 17px;
+    }
+}
+
+footer span {
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+/* End Of Footer */
